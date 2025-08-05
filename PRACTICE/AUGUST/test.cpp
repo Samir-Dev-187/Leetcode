@@ -3,18 +3,21 @@ using namespace std;
 
 int main()
 {
-    vector<vector<int>> a1 = {{1,1},{0,1},{1,1}};
-    vector<vector<int>> a2 = {{1,1},{0,1},{1,1}};
-
-    if(a1 == a2)
+    int n = 10;
+    unordered_map<int,int> storeNum;
+    for(int i=1; i<=n; ++i)
     {
-        cout << "True";
+        storeNum[i]++;
+    }
+
+    if(storeNum.count(1) == 1)
+    {
+        cout << true;
     }
     else
     {
-        cout << "False";
+        cout << false;
     }
-    cout << endl;
 
     return 0;
 }
