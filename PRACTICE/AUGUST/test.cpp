@@ -1,23 +1,14 @@
-#include<bits/stdc++.h>
-using namespace std;
-
-int main()
+bool isPrime(int num)
 {
-    int n = 10;
-    unordered_map<int,int> storeNum;
-    for(int i=1; i<=n; ++i)
+    if (num <= 1) return false;
+    if (num == 2 || num == 3) return true;
+    if (num % 2 == 0 || num % 3 == 0) return false;
+
+    for (int i = 5; i * i <= num; i += 6)
     {
-        storeNum[i]++;
+        if (num % i == 0 || num % (i + 2) == 0)
+            return false;
     }
 
-    if(storeNum.count(1) == 1)
-    {
-        cout << true;
-    }
-    else
-    {
-        cout << false;
-    }
-
-    return 0;
+    return true;
 }
