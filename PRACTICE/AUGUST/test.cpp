@@ -1,32 +1,27 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#include <bits/stdc++.h>
-using namespace std;
-
 class Solution 
 {
 public:
-    double findMaxAverage(vector<int>& nums, int k) 
+    void test(int n) 
     {
-        double sum = 0;
-
-        // First window ka sum
-        for (int i = 0; i < k; i++)
-            sum += nums[i];
-
-        double maxSum = sum;
-
-        // Sliding window
-        for (int i = k; i < nums.size(); i++)
+        for(int i = 0; i < n; ++i)
         {
-            sum += nums[i] - nums[i - k];
-            maxSum = max(maxSum, sum);
+            int j = 0;
         }
-
-        // Average nikal ke 5 decimal tak round
-        double avg = maxSum / k;
-        return round(avg * 1e5) / 1e5;
     }
 };
+
+int main()
+{
+    Solution s1;
+    int n = 2147483647;
+
+    s1.test(n);
+    cout << "Complete";
+    cout << endl;
+
+    return 0;
+}
 
