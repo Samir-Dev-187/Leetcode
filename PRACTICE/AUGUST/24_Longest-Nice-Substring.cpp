@@ -21,12 +21,13 @@ public:
     }
 };
 
-
 int main()
 {
     Solution s1;
-    int n = 2147483647;
+    string s = "YazaAay";
+
+    cout << s1.longestNiceSubstring(s);
+    cout << endl;
 
     return 0;
 }
-
