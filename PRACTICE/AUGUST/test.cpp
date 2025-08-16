@@ -24,8 +24,10 @@ public:
 
 int main()
 {
-    Solution s1;
-    int n = 2147483647;
+    string s = "000";
+
+    if(stoi(s) == 0) cout << true;
+    else cout << false;
 
     return 0;
 }
